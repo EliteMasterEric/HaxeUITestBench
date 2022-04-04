@@ -1,6 +1,9 @@
 package;
 
+import debug.MemoryCounter;
 import flixel.FlxGame;
+import flixel.graphics.FlxGraphic;
+import haxe.ui.Toolkit;
 import openfl.display.FPS;
 import openfl.display.Sprite;
 
@@ -11,7 +14,16 @@ class Main extends Sprite
 	public function new()
 	{
 		super();
-		addChild(new FlxGame(0, 0, PlayState, 1.0, MAX_FPS, MAX_FPS, false, false));
+
+		// Couldn't solve a bug earlier without doing this.
+		FlxGraphic.defaultPersist = true;
+
+		// Make sure to do this!
+		// If you don't you end up with zero-width components in your HaxeUI.
+		Toolkit.init();
+		Toolkit.theme = 'dark';
+
+		addChild(new FlxGame(0, 0, RuntimeMenuState, 1.0, MAX_FPS, MAX_FPS, false, false));
 
 		buildDebugDisplay();
 	}

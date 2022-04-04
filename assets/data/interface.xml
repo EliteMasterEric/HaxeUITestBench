@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<vbox width="100%">
-  <button text="Normal" />
-  <!--
+<vbox style="padding:20px;background-color:white;background-opacity: .5;">
   <section-header text="Default Buttons" />
+  <hbox>
     <hbox>
-        <hbox>
-
+      <button text="Normal" />
             <button text="Toggle" toggle="true" selected="true" />
             <button text="Repeater" repeater="true" />
             <button text="Disabled" disabled="true" />
@@ -88,5 +86,4 @@
             <button text="Item 5" icon="haxeui-core/styles/default/haxeui_small.png" iconPosition="bottom" />
         </button-bar>
     </vbox>    
-  -->
 </vbox>    

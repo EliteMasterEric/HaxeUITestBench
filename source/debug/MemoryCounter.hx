@@ -1,4 +1,4 @@
-package;
+package debug;
 
 import openfl.system.System;
 import openfl.text.TextField;

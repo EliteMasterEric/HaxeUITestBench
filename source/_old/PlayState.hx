@@ -100,11 +100,11 @@ class PlayState extends FlxState
 		FlxG.cameras.add(cameraHUD, false); // False means don't add objects by default.
 		cameraHUD.bgColor.alpha = 0; // Make the background transparent.
 
-		userInterface = ComponentMacros.buildComponent("assets/data/interface.xml");
-		userInterface.width = FlxG.width - 100;
-		userInterface.height = FlxG.height - 100;
-		userInterface.x = 50;
-		userInterface.y = 50;
+		// userInterface = ComponentMacros.buildComponent("assets/data/interface.xml");
+		// userInterface = ComponentMacros.buildComponent("assets/data/demo/main.xml");
+		userInterface = ComponentMacros.buildComponent("assets/data/two-lists.xml");
+		userInterface.x = 0;
+		userInterface.y = 0;
 		userInterface.cameras = [cameraHUD];
 		toggleInterface();
 

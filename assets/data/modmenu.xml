@@ -1,0 +1,21 @@
+<vbox width="100%" height="100%" style="padding: 8px;">
+    <label text="MOD CONFIG" width="100%" style="font-name:'assets/fonts/vcr.ttf';font-size: 32px" textAlign="center" />
+    <listview id="lv2" width="200" height="150" selectedIndex="1">
+        <item-renderer width="100%">
+            <hbox width="100%">
+                <label width="100%" id="item" verticalAlign="center" />
+            </hbox>
+        </item-renderer>
+        <data>
+            <item complete="false" item="Item 1" image="assets/images/modmenu/default-icon.png" />
+            <item complete="true" item="Item 2" image="assets/images/modmenu/default-icon.png" />
+            <item complete="true" item="Item 3" image="assets/images/modmenu/default-icon.png" />
+            <item complete="false" item="Item 4" image="assets/images/modmenu/default-icon.png" />
+            <item complete="true" item="Item 5" image="assets/images/modmenu/default-icon.png" />
+            <item complete="true" item="Item 6" image="assets/images/modmenu/default-icon.png" />
+            <item complete="false" item="Item 7" image="assets/images/modmenu/default-icon.png" />
+            <item complete="true" item="Item 8" image="assets/images/modmenu/default-icon.png" />
+            <item complete="false" item="Item 9" image="assets/images/modmenu/default-icon.png" />
+        </data>
+    </listview>
+</vbox>
