@@ -21,21 +21,19 @@ class RuntimeMenuState extends HaxeUIState // extends MusicBeatState
 		super.create();
 	}
 
-	var componentDisabled:Bool = false;
-
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
 
 		if (FlxG.keys.justPressed.SPACE)
 		{
-			if (componentDisabled)
+			if (this.members.contains(component))
 			{
-				this.add(component);
+				this.remove(component);
 			}
 			else
 			{
-				this.remove(component);
+				this.add(component);
 			}
 		}
 	}
