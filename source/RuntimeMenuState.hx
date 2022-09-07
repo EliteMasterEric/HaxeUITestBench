@@ -12,7 +12,7 @@ class RuntimeMenuState extends HaxeUIState // extends MusicBeatState
 {
 	public function new()
 	{
-		super('assets/data/two-lists.xml');
+		super('assets/data/modmenu.xml');
 	}
 
 	override function create()
@@ -35,6 +35,13 @@ class RuntimeMenuState extends HaxeUIState // extends MusicBeatState
 			{
 				this.add(component);
 			}
+		}
+
+		if (FlxG.keys.justPressed.F5)
+		{
+			this.remove(component);
+			component = buildComponent(_componentKey);
+			this.add(component);
 		}
 	}
 

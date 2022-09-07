@@ -18,13 +18,24 @@ class HaxeUIState extends FlxState
 	override function create()
 	{
 		super.create();
+
 		if (component == null)
-			buildHaxeUIComponent();
-		add(component);
+			component = buildComponent();
+		if (component != null)
+			add(component);
 	}
 
-	private function buildHaxeUIComponent()
+	public function buildComponent(assetPath:String = null)
 	{
-		component = RuntimeComponentBuilder.fromAsset(_componentKey);
+		if (assetPath == null)
+			assetPath = _componentKey;
+		return RuntimeComponentBuilder.fromAsset(assetPath);
+	}
+
+	override function destroy()
+	{
+		if (component != null)
+			remove(component);
+		component = null;
 	}
 }
