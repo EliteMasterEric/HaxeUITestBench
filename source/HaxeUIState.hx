@@ -1,7 +1,10 @@
+import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxSubState;
 import haxe.ui.RuntimeComponentBuilder;
+import haxe.ui.components.Button;
 import haxe.ui.components.CheckBox;
+import haxe.ui.containers.SideBar;
 import haxe.ui.containers.menus.MenuCheckBox;
 import haxe.ui.core.Component;
 import haxe.ui.events.UIEvent;
@@ -26,20 +29,6 @@ class HaxeUIState extends FlxState
 			component = buildComponent();
 		if (component != null)
 			add(component);
-
-		var menuCheckBox:MenuCheckBox = component.findComponent("menuCheck", MenuCheckBox);
-
-		menuCheckBox.onChange = function(event:UIEvent)
-		{
-			trace('Changed: ${event.value}');
-		}
-
-		var baseCheckBox:CheckBox = component.findComponent("baseCheck", CheckBox);
-
-		baseCheckBox.onChange = function(event:UIEvent)
-		{
-			trace('Changed: ${event.value}');
-		}
 	}
 
 	public function buildComponent(assetPath:String = null)

@@ -23,7 +23,7 @@ class Main extends Sprite
 		Toolkit.init();
 		Toolkit.theme = 'dark';
 
-		addChild(new FlxGame(0, 0, RuntimeMenuState, 1.0, MAX_FPS, MAX_FPS, false, false));
+		addChild(new FlxGame(0, 0, RuntimeMenuState, MAX_FPS, MAX_FPS, false, false));
 
 		buildDebugDisplay();
 	}
