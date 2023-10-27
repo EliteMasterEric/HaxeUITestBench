@@ -8,6 +8,7 @@ import haxe.ui.components.Button;
 import haxe.ui.components.CheckBox;
 import haxe.ui.components.TextField;
 import haxe.ui.containers.TabView;
+import haxe.ui.containers.dialogs.Dialogs;
 import haxe.ui.containers.menus.MenuBar;
 import haxe.ui.containers.menus.MenuCheckBox;
 
@@ -66,6 +67,12 @@ class RuntimeMenuState extends UIRuntimeState
 	public function onClickButtonPage2(_)
 	{
 		trace("Clicked Page 2!");
+		Dialogs.openBinaryFile('Open Instrumental', [{label: 'OGG Audio File', extension: 'ogg'}], onSelectedFilePage2);
+	}
+
+	function onSelectedFilePage2(info:SelectedFileInfo):Void
+	{
+		trace('File selected! ${info.name} (${info.fullPath}) (Binary? ${info.isBinary} ${info.bytes.length} bytes)');
 	}
 
 	@:bind(buttonPage3, MouseEvent.CLICK)
