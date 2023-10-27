@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<box width="100%" height="100%">
+  <vbox width="100%" height="100%" style="padding: 8px;">
+    <style>
+      #btnUp .icon, #btnEnable .icon, #btnDisable .icon, #btnDown .icon {
+      width: 32px;
+      height: 32px;
+      }
+    </style>
+    
+    <menubar id="menubar" width="100%">
+      <menu text="Test">
+        <menucheckbox id="menuCheck" text="Value" />
+      </menu>
+    </menubar>
+
+    <spacer height="100%" />
+
+    <tabview id="tabView1" width="50%" height="100%">
+      <vbox text="Page 1" icon="haxeui-core/styles/default/haxeui_tiny.png">
+        <button id="buttonPage1" text="Page 1's Button" />
+        <textfield id="textfieldPage1" placeholder="Test 1" />
+        <checkbox id="checkboxPage1" />
+      </vbox>
+      <vbox text="Page 2" icon="haxeui-core/styles/default/haxeui_tiny.png">
+        <button id="buttonPage2" text="Page 2's Button" />
+      </vbox>
+      <vbox text="Page 3" icon="haxeui-core/styles/default/haxeui_tiny.png">
+        <button id="buttonPage3" text="Page 3's Button" />
+      </vbox>
+      <vbox text="Page 4" icon="haxeui-core/styles/default/haxeui_tiny.png">
+        <button id="buttonPage4" text="Page 4's Button" />
+      </vbox>
+    </tabview>
+
+  </vbox>
+</box>

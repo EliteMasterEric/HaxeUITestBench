@@ -17,6 +17,8 @@
 	<haxelib name="haxeui-core"/>
 	<haxelib name="haxeui-flixel"/>
 
+	<haxedef name="haxeui_focus_out_on_click" />
+
 	<haxedef name="FLX_NO_MOUSE" if="mobile" />
 	<haxedef name="FLX_NO_KEYBOARD" if="mobile" />
 	<haxedef name="FLX_NO_TOUCH" if="desktop" />
