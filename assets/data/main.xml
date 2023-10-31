@@ -21,6 +21,14 @@
         <button id="buttonPage1" text="Page 1's Button" />
         <textfield id="textfieldPage1" placeholder="Test 1" />
         <checkbox id="checkboxPage1" />
+        <dropdown id="dropdownPage1">
+          <data>
+            <item id="foo" text="Foo" />
+            <item id="position" text="Position" />
+            <item id="bar" text="Bar" />
+            <item id="baz" text="Baz" />
+          </data>
+        </dropdown>
       </vbox>
       <vbox text="Page 2" icon="haxeui-core/styles/default/haxeui_tiny.png">
         <button id="buttonPage2" text="Page 2's Button" />
